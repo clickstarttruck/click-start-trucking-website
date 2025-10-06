@@ -62,14 +62,14 @@
             <h2>Driver Application</h2>
             <p>Ready to get started? Fill out our application form below. All information is kept confidential.</p>
             <!--
-              When hosting on a static site like GitHub Pages there is no backend to
-              process form submissions. Instead of performing a network request,
-              we intercept the submit event via JavaScript. If the form passes
-              validation we display a success message and reset the form. This
-              prevents the browser from trying to post data to a non‑existent
-              server (which would result in a “Site can’t be reached” error).
+              When hosting on Netlify, you can enable serverless form handling by
+              adding a `data-netlify="true"` attribute and giving the form a name.
+              Netlify will capture the submission and store it in the dashboard.
+              We also keep client-side validation via `validateForm()` so invalid
+              SSN/EIN patterns are blocked before submission.
             -->
-            <form enctype="multipart/form-data" onsubmit="return handleSubmit(event);">
+            <form name="driver-application" method="POST" data-netlify="true"
+                  enctype="multipart/form-data" onsubmit="return validateForm();">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required placeholder="Enter your full name">
@@ -96,10 +96,6 @@
                 </div>
                 <button type="submit" class="btn-primary">Submit Application</button>
             </form>
-            <!-- Success message that appears after form submission -->
-            <div id="success-message" class="success-message" style="display: none; margin-top: 20px; padding: 20px; background-color: #e6f7e6; border: 1px solid #b4e5b4; border-radius: 6px; color: #286f28;">
-                <strong>Thank you!</strong> Your application has been submitted successfully. We will review your information and get back to you soon.
-            </div>
         </div>
     </section>
 
@@ -130,22 +126,8 @@
         return true;
     }
 
-    // Intercept form submission on static hosts.
-    function handleSubmit(event) {
-        // Prevent default submission since there is no server to handle POST requests
-        event.preventDefault();
-        // First validate the SSN/EIN input using the existing validation function
-        if (!validateForm()) {
-            // If validation fails, do not proceed
-            return false;
-        }
-        // Hide any existing success message in case of repeated submissions
-        const successDiv = document.getElementById('success-message');
-        successDiv.style.display = 'block';
-        // Optionally reset the form to clear out user input
-        event.target.reset();
-        return false;
-    }
+    // Note: Netlify will handle form submissions. We only validate client-side to
+    // ensure the SSN/EIN format is correct before submission.
     </script>
 </body>
 </html>
