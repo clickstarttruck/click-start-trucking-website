@@ -1,0 +1,230 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  color: #1a1a1a;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #0077c8;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #005fa3;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background-image: url('ChatGPT Image Jul 7, 2025, 02_34_01 PM.png');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.hero .tagline {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero .tagline {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mission Section */
+.mission {
+  padding: 60px 0;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.mission h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #0077c8;
+}
+
+.mission p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Benefits Section */
+/* Benefits Section with background image of branded truck */
+.benefits {
+  padding: 60px 0;
+  /* Use a semi‑transparent overlay over the truck image to keep text legible */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('ChatGPT Image Jul 7_ 2025_ 02_09_24 PM.png');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+/* Adjust heading color in benefits section to contrast with dark overlay */
+.benefits h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Style benefit cards to be semi‑transparent on dark background */
+.benefit-item {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  text-align: left;
+}
+
+/* Benefit heading color on dark background */
+.benefit-item h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Application Section */
+.application {
+  padding: 60px 0;
+  background-color: #f5f5f5;
+}
+
+.application h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: #0077c8;
+}
+
+.application p {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px 30px 30px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input[type="file"] {
+  padding: 6px;
+}
+
+.file-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+button[type="submit"],
+.btn-primary {
+  display: inline-block;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #0a1f44;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin-bottom: 5px;
+}
+
+footer .footnote {
+  font-size: 0.8rem;
+  color: #cccccc;
+}
