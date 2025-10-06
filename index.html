@@ -61,7 +61,15 @@
         <div class="container">
             <h2>Driver Application</h2>
             <p>Ready to get started? Fill out our application form below. All information is kept confidential.</p>
-            <form action="#" method="post" enctype="multipart/form-data" onsubmit="return validateForm();">
+            <!--
+              When hosting on a static site like GitHub Pages there is no backend to
+              process form submissions. Instead of performing a network request,
+              we intercept the submit event via JavaScript. If the form passes
+              validation we display a success message and reset the form. This
+              prevents the browser from trying to post data to a non‑existent
+              server (which would result in a “Site can’t be reached” error).
+            -->
+            <form enctype="multipart/form-data" onsubmit="return handleSubmit(event);">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required placeholder="Enter your full name">
@@ -88,6 +96,10 @@
                 </div>
                 <button type="submit" class="btn-primary">Submit Application</button>
             </form>
+            <!-- Success message that appears after form submission -->
+            <div id="success-message" class="success-message" style="display: none; margin-top: 20px; padding: 20px; background-color: #e6f7e6; border: 1px solid #b4e5b4; border-radius: 6px; color: #286f28;">
+                <strong>Thank you!</strong> Your application has been submitted successfully. We will review your information and get back to you soon.
+            </div>
         </div>
     </section>
 
@@ -116,6 +128,23 @@
             return false;
         }
         return true;
+    }
+
+    // Intercept form submission on static hosts.
+    function handleSubmit(event) {
+        // Prevent default submission since there is no server to handle POST requests
+        event.preventDefault();
+        // First validate the SSN/EIN input using the existing validation function
+        if (!validateForm()) {
+            // If validation fails, do not proceed
+            return false;
+        }
+        // Hide any existing success message in case of repeated submissions
+        const successDiv = document.getElementById('success-message');
+        successDiv.style.display = 'block';
+        // Optionally reset the form to clear out user input
+        event.target.reset();
+        return false;
     }
     </script>
 </body>
