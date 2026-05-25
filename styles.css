@@ -228,3 +228,146 @@ footer .footnote {
   font-size: 0.8rem;
   color: #cccccc;
 }
+
+/* ================================================
+   Site Navigation Bar
+   ================================================ */
+.site-nav {
+    background-color: #0d1b2a;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.nav-brand {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.nav-brand:hover {
+    color: #7ec8e3;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #ccddee;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #7ec8e3;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        gap: 14px;
+    }
+}
+
+/* ================================================
+   SMS Opt-In Consent Block
+   ================================================ */
+.sms-consent {
+    background-color: #f0f6ff;
+    border: 1px solid #b3cde8;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-top: 20px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: 3px;
+    min-width: 18px;
+    min-height: 18px;
+    accent-color: #0077c8;
+    cursor: pointer;
+}
+
+.sms-disclosure {
+    margin-top: 14px;
+    font-size: 0.875rem;
+    color: #444444;
+    line-height: 1.6;
+    padding: 12px 16px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #0077c8;
+    border-radius: 0 4px 4px 0;
+}
+
+.sms-disclosure a {
+    color: #0077c8;
+    text-decoration: underline;
+}
+
+.legal-links {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #444444;
+}
+
+.legal-links a {
+    color: #0077c8;
+    text-decoration: underline;
+}
+
+.legal-links a:hover {
+    color: #005fa3;
+}
+
+/* ================================================
+   Footer Navigation Links
+   ================================================ */
+.footer-nav {
+    margin: 8px 0 6px;
+    font-size: 0.9rem;
+}
+
+.footer-nav a {
+    color: #7ec8e3;
+    text-decoration: none;
+    margin: 0 4px;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
