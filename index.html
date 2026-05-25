@@ -7,127 +7,174 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header / Hero Section -->
-    <header class="hero">
-        <div class="hero-overlay">
-            <h1>Click&nbsp;Start&nbsp;Trucking</h1>
-            <p class="tagline">Get&nbsp;Paid&nbsp;First</p>
-            <a href="#apply" class="btn-primary">Apply Now</a>
-        </div>
-    </header>
 
-    <!-- Mission Statement Section -->
-    <section class="mission" id="mission">
-        <div class="container">
-            <h2>Our Mission</h2>
-            <p>
-                At Click Start Trucking, our mission is to empower owner‑operators and contract drivers
-                by providing steady freight, competitive compensation, and unparalleled support. We
-                believe drivers deserve transparency and respect, so we pay you first—ensuring you’re
-                rewarded for your hard work before anyone else. Our goal is to build long‑term
-                partnerships founded on trust, safety and reliability. Together, we keep America
-                moving.
-            </p>
-        </div>
-    </section>
+<!-- Site Navigation -->
+<nav class="site-nav">
+    <div class="container nav-inner">
+        <a class="nav-brand" href="/">Click Start Trucking</a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/opt-in.html">Opt-In / Apply</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms-of-service.html">Terms of Service</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <!-- Benefits Section -->
-    <section class="benefits">
-        <div class="container">
-            <h2>Why Drive With Us?</h2>
-            <div class="benefit-grid">
-                <div class="benefit-item">
-                    <h3>Get Paid First</h3>
-                    <p>You’re the heart of our business. We put you first by paying you before any other party.</p>
-                </div>
-                <div class="benefit-item">
-                    <h3>Steady Lanes</h3>
-                    <p>Choose from top lanes nationwide—from box trucks to flatbeds—so you always know where you’re headed.</p>
-                </div>
-                <div class="benefit-item">
-                    <h3>Flexible Options</h3>
-                    <p>Whether you’re an owner‑operator or contract driver, we work with you to find loads that fit your schedule.</p>
-                </div>
-                <div class="benefit-item">
-                    <h3>Support You Can Trust</h3>
-                    <p>Our team is available around the clock to answer questions and assist with dispatch, billing and logistics.</p>
-                </div>
+<!-- Header / Hero Section -->
+<header class="hero">
+    <div class="hero-overlay">
+        <h1>Click&nbsp;Start&nbsp;Trucking</h1>
+        <p class="tagline">Get&nbsp;Paid&nbsp;First</p>
+        <a href="/opt-in.html" class="btn-primary">Apply Now</a>
+    </div>
+</header>
+
+<!-- Mission Statement Section -->
+<section class="mission" id="mission">
+    <div class="container">
+        <h2>Our Mission</h2>
+        <p>
+            At Click Start Trucking, our mission is to empower owner&#8209;operators and contract drivers
+            by providing steady freight, competitive compensation, and unparalleled support. We
+            believe drivers deserve transparency and respect, so we pay you first&#8212;ensuring you're
+            rewarded for your hard work before anyone else. Our goal is to build long&#8209;term
+            partnerships founded on trust, safety and reliability. Together, we keep America
+            moving.
+        </p>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits">
+    <div class="container">
+        <h2>Why Drive With Us?</h2>
+        <div class="benefit-grid">
+            <div class="benefit-item">
+                <h3>Get Paid First</h3>
+                <p>You're the heart of our business. We put you first by paying you before any other party.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Steady Lanes</h3>
+                <p>Choose from top lanes nationwide&#8212;from box trucks to flatbeds&#8212;so you always know where you're headed.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Flexible Options</h3>
+                <p>Whether you're an owner&#8209;operator or contract driver, we work with you to find loads that fit your schedule.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Support You Can Trust</h3>
+                <p>Our team is available around the clock to answer questions and assist with dispatch, billing and logistics.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Application Form Section -->
-    <section class="application" id="apply">
-        <div class="container">
-            <h2>Driver Application</h2>
-            <p>Ready to get started? Fill out our application form below. All information is kept confidential.</p>
-            <!--
-              When hosting on Netlify, you can enable serverless form handling by
-              adding a `data-netlify="true"` attribute and giving the form a name.
-              Netlify will capture the submission and store it in the dashboard.
-              We also keep client-side validation via `validateForm()` so invalid
-              SSN/EIN patterns are blocked before submission.
-            -->
-            <form name="driver-application" method="POST" data-netlify="true"
-                  enctype="multipart/form-data" onsubmit="return validateForm();">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="name@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="(XXX) XXX‑XXXX">
-                </div>
-                <div class="form-group">
-                    <label for="ssn">Social Security Number (SSN) or Employer Identification Number (EIN)</label>
-                    <input type="text" id="ssn" name="ssn" required placeholder="XXX‑XX‑XXXX or XX‑XXXXXXX">
-                </div>
-                <div class="form-group">
-                    <label for="license-number">Driver’s License Number</label>
-                    <input type="text" id="license-number" name="license-number" required placeholder="Enter your license number">
-                </div>
-                <div class="form-group file-group">
-                    <label for="license-file">Upload Your Driver’s License (front & back)</label>
-                    <input type="file" id="license-file" name="license-file" accept="image/*,.pdf" required>
-                </div>
-                <button type="submit" class="btn-primary">Submit Application</button>
-            </form>
-        </div>
-    </section>
+<!-- Application / SMS Opt-In Section -->
+<section class="application" id="apply">
+    <div class="container">
+        <h2>Driver Application &amp; SMS Opt-In</h2>
+        <p>Ready to get started? Fill out our application form below. All information is kept confidential.</p>
+        <!--
+          Netlify form handling: data-netlify="true" captures submissions in the dashboard.
+          Client-side validation via validateForm() blocks invalid SSN/EIN patterns before submit.
+        -->
+        <form name="driver-application" method="POST" data-netlify="true"
+              enctype="multipart/form-data" onsubmit="return validateForm();">
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="year"></span> Click Start Trucking. All rights reserved.</p>
-            <p class="footnote">We respect your privacy. All information is transmitted securely and kept confidential.</p>
-        </div>
-    </footer>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
 
-    <script>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="name@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="(XXX) XXX-XXXX">
+            </div>
+
+            <div class="form-group">
+                <label for="ssn">Social Security Number (SSN) or Employer Identification Number (EIN)</label>
+                <input type="text" id="ssn" name="ssn" required placeholder="XXX-XX-XXXX or XX-XXXXXXX">
+            </div>
+
+            <div class="form-group">
+                <label for="license-number">Driver's License Number</label>
+                <input type="text" id="license-number" name="license-number" required placeholder="Enter your license number">
+            </div>
+
+            <div class="form-group file-group">
+                <label for="license-file">Upload Your Driver's License (front &amp; back)</label>
+                <input type="file" id="license-file" name="license-file" accept="image/*,.pdf" required>
+            </div>
+
+            <!-- SMS Opt-In Consent (A2P 10DLC required) -->
+            <div class="form-group sms-consent">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="sms-consent" name="sms-consent" value="yes" required>
+                    I agree to receive SMS messages from Click Start Trucking LLC regarding my driver
+                    application, onboarding reminders, document requests, and status updates.
+                    Message &amp; data rates may apply. Reply <strong>STOP</strong> to opt out at any
+                    time. Reply <strong>HELP</strong> for help.
+                </label>
+            </div>
+
+            <p class="sms-disclosure">
+                By submitting this form, you consent to receive automated SMS messages from
+                Click Start Trucking LLC. Message frequency varies. Message &amp; data rates may apply.
+                Reply <strong>STOP</strong> to unsubscribe at any time. Reply <strong>HELP</strong>
+                for assistance, or contact us at
+                <a href="mailto:admin@clickstarttruck.com">admin@clickstarttruck.com</a> /
+                <a href="tel:+14706700970">(470) 670-0970</a>.
+                Consent is not a condition of any purchase or service.
+            </p>
+
+            <p class="legal-links">
+                Please review our
+                <a href="/privacy-policy.html">Privacy Policy</a> and
+                <a href="/terms-of-service.html">Terms of Service</a> before submitting.
+            </p>
+
+            <button type="submit" class="btn-primary">Submit Application</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; <span id="year"></span> Click Start Trucking LLC. All rights reserved.</p>
+        <nav class="footer-nav">
+            <a href="/privacy-policy.html">Privacy Policy</a> |
+            <a href="/terms-of-service.html">Terms of Service</a>
+        </nav>
+        <p class="footnote">All information is transmitted securely and kept confidential.</p>
+    </div>
+</footer>
+
+<script>
     // Update current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
-    
+
     // Basic client-side form validation for SSN/EIN
     function validateForm() {
         const ssnField = document.getElementById('ssn');
         const ssn = ssnField.value.trim();
-        // Simple pattern check for SSN (###-##-####) or EIN (##-#######)
+        // Pattern check for SSN (###-##-####) or EIN (##-#######)
         const ssnPattern = /^\d{3}-?\d{2}-?\d{4}$/;
         const einPattern = /^\d{2}-?\d{7}$/;
         if (!ssnPattern.test(ssn) && !einPattern.test(ssn)) {
-            alert('Please enter a valid SSN (XXX-XX-XXXX) or EIN (XX-XXXXXXX).');
+            alert('Please enter a valid SSN (###-##-####) or EIN (##-#######).');
             ssnField.focus();
             return false;
         }
         return true;
     }
+</script>
 
-    // Note: Netlify will handle form submissions. We only validate client-side to
-    // ensure the SSN/EIN format is correct before submission.
-    </script>
 </body>
 </html>
