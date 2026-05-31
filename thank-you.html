@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Received | Click Start Trucking</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="/">Click Start Trucking</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/opt-in.html">Opt-In / Apply</a></li>
+        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="/terms-of-service.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="hero-overlay">
+      <h1>Application Received</h1>
+      <p class="tagline">We're calling you now</p>
+    </div>
+  </header>
+  <section class="thank-you">
+    <div class="container">
+      <h2>Thank you for applying!</h2>
+      <p>Our team will review your information and reach out shortly.</p>
+      <p>If you need immediate assistance, call us at <a href="tel:4709314436">(470) 931-4436</a>.</p>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Click Start Trucking LLC. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="/privacy-policy.html">Privacy Policy</a> |
+        <a href="/terms-of-service.html">Terms of Service</a>
+      </nav>
+      <p class="footnote">All information is transmitted securely and kept confidential.</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
