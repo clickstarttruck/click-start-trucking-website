@@ -65,7 +65,7 @@ BLOCK 1 (checkbox label — KEEP THIS, but update text as shown below):
                                             <strong>START</strong> to re-subscribe. Reply <strong>HELP</strong>
                                                 for assistance, or contact us at
                                                     <a href="mailto:admin@clickstarttruck.com">admin@clickstarttruck.com</a>
-                                                        / <a href="tel:4706700970">(470) 670-0970</a>.
+                                                        / <a href="tel:4709314436">(470) 931-4436</a>.
                                                             Message frequency varies. Consent is not a condition of any purchase
                                                                 or service.
                                                                   </label>
@@ -109,7 +109,7 @@ BLOCK 1 (checkbox label — KEEP THIS, but update text as shown below):
                                                                                                             <strong>START</strong> to re-subscribe. Reply <strong>HELP</strong>
                                                                                                                 for assistance, or contact us at
                                                                                                                     <a href="mailto:admin@clickstarttruck.com">admin@clickstarttruck.com</a>
-                                                                                                                        / <a href="tel:4706700970">(470) 670-0970</a>.
+                                                                                                                        / <a href="tel:4709314436">(470) 931-4436</a>.
                                                                                                                             Message frequency varies. Consent is not a condition of any purchase
                                                                                                                                 or service.
                                                                                                                                   </label>
