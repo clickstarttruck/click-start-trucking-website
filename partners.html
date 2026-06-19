@@ -26,9 +26,16 @@ nav a { color: #cce; text-decoration: none; margin-left: 18px; font-size: 0.95re
 .form-intro h2 { font-size: 1.25rem; color: #1a2e4a; margin-bottom: 8px; }
 footer { background: #1a2e4a; color: #aab8cc; text-align: center; padding: 22px 20px; font-size: 0.85rem; margin-top: 60px; }
 footer a { color: #cce; }
+/* Keep the embedded GoHighLevel form visible. form_embed.js hides the iframe on load
+   and waits for a reveal message that does not always arrive; this forces it visible. */
+iframe[src*="leadconnectorhq.com/widget/form"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  position: static !important;
+  left: auto !important;
+}
 </style>
-<!-- GHL form embed script -->
-<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </head>
 <body>
 <header>
